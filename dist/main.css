@@ -5,4 +5,28 @@
   padding: 0;
   box-sizing: border-box;
   outline: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 100%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 101vh;
+  background: #211;
+  color: #fff;
+}
+
+button {
+  font: inherit;
+}
+
+.game {
+  padding: 15px 20px;
+  border: 1.5px solid #fff;
+  border-radius: 11px;
+  width: 92%;
+  max-width: 500px;
 }/*# sourceMappingURL=main.css.map */
