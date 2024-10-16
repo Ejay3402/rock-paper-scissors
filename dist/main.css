@@ -26,7 +26,95 @@ button {
 .game {
   padding: 15px 20px;
   border: 1.5px solid #fff;
+  background: #211;
   border-radius: 11px;
   width: 92%;
   max-width: 500px;
+}
+.game .h11 {
+  text-align: center;
+  margin: 12px auto;
+  color: blueviolet;
+  font-size: 2.5rem;
+  text-shadow: 4px 2px red;
+}
+.game .sup-heading {
+  text-align: center;
+  margin: 16px auto;
+  font-size: 2.5rem;
+}
+.game .game-btns {
+  display: flex;
+  background: #211;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.game .game-btns button {
+  background: transparent;
+  border-radius: 50px;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.game .game-btns button img {
+  overflow: hidden;
+  width: 100px;
+  transition: 0.2s ease-in;
+}
+.game .game-btns button:hover img {
+  transform: scale(1.155);
+}
+.game #score-output {
+  text-align: center;
+  margin: 15px auto;
+  font-size: 2rem;
+}
+.game .move {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+.game .move h3 {
+  font-size: 1.7rem;
+  color: orangered;
+}
+.game .move img {
+  width: 80px;
+  margin: auto 5px;
+}
+.game .rates {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 22px auto;
+}
+.game .rates .wins {
+  color: green;
+}
+.game .rates .loses {
+  color: rgb(240, 10, 10);
+}
+.game .rates .ties {
+  color: blue;
+}
+.game .reset {
+  text-align: center;
+  margin: 15px auto;
+}
+.game .reset #reset-game {
+  text-align: center;
+  padding: 10px 20px;
+  background: blueviolet;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+.game .reset #reset-game:hover {
+  background: blue;
 }/*# sourceMappingURL=main.css.map */
