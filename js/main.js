@@ -44,7 +44,7 @@ const computerMove = () => {
 const playGame = (game) => {
     let gameText = computerMove();
     
-    if (gameText === `Rock`) {
+    /* if (gameText === `Rock`) {
         player_move.setAttribute("src", `images/${game}.jpg`);
         computer_move.setAttribute("src", `images/${gameText}.jpg`);
     } else if (gameText === `Paper`) {
@@ -54,6 +54,9 @@ const playGame = (game) => {
         player_move.setAttribute("src", `images/${game}.jpg`);
         computer_move.setAttribute("src", `images/${gameText}.jpg`);
     }
+ */
+    player_move.setAttribute("src", `images/${game}.jpg`);
+    computer_move.setAttribute("src", `images/${gameText}.jpg`);
     
 };
 
