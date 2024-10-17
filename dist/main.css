@@ -93,7 +93,7 @@ button {
   margin: 22px auto;
 }
 .game .rates .wins {
-  color: green;
+  color: rgb(10, 207, 10);
 }
 .game .rates .loses {
   color: rgb(240, 10, 10);
