@@ -36,13 +36,28 @@ const computerMove = () => {
     } else if (randomNum === 3) {
         gameText = `Scissors`;
     }
+    return gameText;    
 };
 
-const playGame = () => {
+//playgame
+
+const playGame = (game) => {
     let gameText = computerMove();
-    console.log(gameText);
+    
+    if (gameText === `Rock`) {
+        player_move.setAttribute("src", `images/${game}.jpg`);
+        computer_move.setAttribute("src", `images/${gameText}.jpg`);
+    } else if (gameText === `Paper`) {
+        player_move.setAttribute("src", `images/${game}.jpg`);
+        computer_move.setAttribute("src", `images/${gameText}.jpg`);
+    } else if (gameText === `Scissors`) {
+        player_move.setAttribute("src", `images/${game}.jpg`);
+        computer_move.setAttribute("src", `images/${gameText}.jpg`);
+    }
     
 };
-console.log(playGame());
-playGame();
-console.log(computerMove());
+
+
+roct_btn.addEventListener("click", () => playGame(`rock`));
+paper_btn.addEventListener("click", () => playGame(`paper`));
+scissors_btn.addEventListener("click", () => playGame(`Scissors`));
