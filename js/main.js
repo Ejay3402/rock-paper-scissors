@@ -16,3 +16,30 @@ const ties_output = document.querySelector(`#ties-output`);
 
 const computer_move = document.querySelector(`#computer-move`);
 const player_move = document.querySelector(`#player-move`);
+
+//reset button
+
+const reset_btn = document.querySelector(`#reset-game`);
+
+
+//computer random move 
+
+const computerMove = () => {
+    let randomNum = Math.random();
+    
+    if (randomNum === 0 || randomNum <= 1/3) {
+        result = `Rock`;
+    } else if (randomNum > 1/3 || randomNum <= 2/3) {
+        result = `Paper`;
+    } else if (randomNum > 2/3 || randomNum <= 1) {
+        result = `Scissors`;
+    }
+    return result;
+};
+
+const playGame = () => {
+    let val = computerMove();
+    console.log(val);
+    
+};
+playGame();
