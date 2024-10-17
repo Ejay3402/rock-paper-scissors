@@ -61,6 +61,6 @@ const playGame = (game) => {
 };
 
 
-roct_btn.addEventListener("click", () => playGame(`rock`));
-paper_btn.addEventListener("click", () => playGame(`paper`));
+roct_btn.addEventListener("click", () => playGame(`Rock`));
+paper_btn.addEventListener("click", () => playGame(`Paper`));
 scissors_btn.addEventListener("click", () => playGame(`Scissors`));
