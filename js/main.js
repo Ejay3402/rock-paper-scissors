@@ -25,21 +25,24 @@ const reset_btn = document.querySelector(`#reset-game`);
 //computer random move 
 
 const computerMove = () => {
-    let randomNum = Math.random();
-    
-    if (randomNum === 0 || randomNum <= 1/3) {
-        result = `Rock`;
-    } else if (randomNum > 1/3 || randomNum <= 2/3) {
-        result = `Paper`;
-    } else if (randomNum > 2/3 || randomNum <= 1) {
-        result = `Scissors`;
+    let min = 1;
+    let max = 3;
+    let randomNum = Math.floor(Math.random() * max) + min;
+    let gameText;
+    if (randomNum === 1) {
+        gameText = `Rock`;
+    } else if (randomNum === 2) {
+        gameText = `Paper`;
+    } else if (randomNum === 3) {
+        gameText = `Scissors`;
     }
-    return result;
 };
 
 const playGame = () => {
-    let val = computerMove();
-    console.log(val);
+    let gameText = computerMove();
+    console.log(gameText);
     
 };
+console.log(playGame());
 playGame();
+console.log(computerMove());
