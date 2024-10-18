@@ -42,21 +42,51 @@ const computerMove = () => {
 //playgame
 
 const playGame = (game) => {
-    let gameText = computerMove();
+    let computerMovePlay = computerMove();
     
-    /* if (gameText === `Rock`) {
-        player_move.setAttribute("src", `images/${game}.jpg`);
-        computer_move.setAttribute("src", `images/${gameText}.jpg`);
-    } else if (gameText === `Paper`) {
-        player_move.setAttribute("src", `images/${game}.jpg`);
-        computer_move.setAttribute("src", `images/${gameText}.jpg`);
-    } else if (gameText === `Scissors`) {
-        player_move.setAttribute("src", `images/${game}.jpg`);
-        computer_move.setAttribute("src", `images/${gameText}.jpg`);
+    if (game === `Rock`) {
+
+         if (computerMovePlay === `Rock`) {
+            score_output.textContent = `Tie`;
+            score_output.style.color = 'blue' ;
+        } else if (computerMovePlay === `Paper`) {
+            score_output.textContent = `You Lose`;
+            score_output.style.color = 'rgb(240, 10, 10)' ;
+        } else if (computerMovePlay === `Scissors`) {
+            score_output.textContent = `You Win`;
+            score_output.style.color = 'rgb(10, 207, 10)' ;
+        }
+
+    } else if (game === `Paper`) {
+        
+        if (computerMovePlay === `Rock`) {
+            score_output.textContent = `You Win`;
+            score_output.style.color = 'rgb(10, 207, 10)' ;
+        } else if (computerMovePlay === `Paper`) {
+            score_output.textContent = `Tie`;
+            score_output.style.color = 'blue' ;
+        } else if (computerMovePlay === `Scissors`) {
+            score_output.textContent = `You Lose`;
+            score_output.style.color = 'rgb(240, 10, 10)';
+        }
+
+    } else if (game === `Scissors`) {
+        
+        if (computerMovePlay === `Rock`) {
+            score_output.textContent = `You Lose`;
+            score_output.style.color = 'rgb(240, 10, 10)';
+        } else if (computerMovePlay === `Paper`) {
+            score_output.textContent = `You Win`;
+            score_output.style.color = 'rgb(10, 207, 10)' ;
+        } else if (computerMovePlay === `Scissors`) {
+            score_output.textContent = `Tie`;
+            score_output.style.color = 'blue' ;
+        }
+
     }
- */
+
     player_move.setAttribute("src", `images/${game}.jpg`);
-    computer_move.setAttribute("src", `images/${gameText}.jpg`);
+    computer_move.setAttribute("src", `images/${computerMovePlay}.jpg`);
     
 };
 
