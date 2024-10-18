@@ -24,11 +24,18 @@ const reset_btn = document.querySelector(`#reset-game`);
 
 //scores 
 
-let gameScore = {
+let gameScore = JSON.parse(localStorage.getItem('scores')) || {
     wins : 0,
     loses : 0,
     ties : 0,
-}
+};
+
+//scores updates
+const scoreUpdates = () => {
+    wins_output.textContent = gameScore.wins;
+    loses_output.textContent = gameScore.loses;
+    ties_output.textContent = gameScore.ties;
+};
 
 //computer random move 
 
@@ -115,13 +122,31 @@ if (resultS === `You Win`) {
 }
 
 //updating the game scores on the page
-wins_output.textContent = gameScore.wins;
+/* wins_output.textContent = gameScore.wins;
 loses_output.textContent = gameScore.loses;
-ties_output.textContent = gameScore.ties;
-    
+ties_output.textContent = gameScore.ties; */
+scoreUpdates();
+
+
+//keeping the scores if the page get reloaded
+localStorage.setItem('scores', JSON.stringify(gameScore));
+
 };
+
+//updating the game scores on the page
+scoreUpdates();
 
 
 roct_btn.addEventListener("click", () => playGame(`Rock`));
 paper_btn.addEventListener("click", () => playGame(`Paper`));
 scissors_btn.addEventListener("click", () => playGame(`Scissors`));
+
+reset_btn.addEventListener("click", () => {
+    gameScore.wins = 0;
+    gameScore.ties = 0;
+    gameScore.loses = 0;
+    scoreUpdates();
+    score_output.textContent = `Game Reset Pick a move again`;
+    score_output.style.color = `#fff`;
+    localStorage.removeItem('scores');
+});
