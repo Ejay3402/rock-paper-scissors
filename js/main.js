@@ -122,9 +122,6 @@ if (resultS === `You Win`) {
 }
 
 //updating the game scores on the page
-/* wins_output.textContent = gameScore.wins;
-loses_output.textContent = gameScore.loses;
-ties_output.textContent = gameScore.ties; */
 scoreUpdates();
 
 
@@ -146,6 +143,8 @@ reset_btn.addEventListener("click", () => {
     gameScore.ties = 0;
     gameScore.loses = 0;
     scoreUpdates();
+    player_move.setAttribute("src", ``);
+    computer_move.setAttribute("src", ``);
     score_output.textContent = `Game Reset Pick a move again`;
     score_output.style.color = `#fff`;
     localStorage.removeItem('scores');

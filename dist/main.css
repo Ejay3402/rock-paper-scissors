@@ -117,4 +117,35 @@ button {
 }
 .game .reset #reset-game:hover {
   background: blue;
+}
+
+@media (max-width: 377px) {
+  .game {
+    padding: 15px 10px;
+  }
+  .game .h11 {
+    font-size: 1.7rem;
+  }
+  .game .sup-heading {
+    font-size: 1.5rem;
+  }
+  .game .game-btns button img {
+    width: 77px;
+  }
+  .game #score-output {
+    font-size: 1.3rem;
+  }
+  .game .move h3 {
+    font-size: 1.2rem;
+  }
+  .game .move img {
+    width: 60px;
+    margin: auto 5px;
+  }
+  .game .rates h2 {
+    font-size: 1.2rem;
+  }
+  .game .reset #reset-game {
+    padding: 10px 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
