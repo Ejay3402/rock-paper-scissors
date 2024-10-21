@@ -43,6 +43,7 @@ const computerMove = () => {
     let min = 1;
     let max = 3;
     let randomNum = Math.floor(Math.random() * max) + min;
+    //or Math.ceil(Math.random() * 3);
     let gameText;
     if (randomNum === 1) {
         gameText = `Rock`;
